@@ -1,0 +1,44 @@
+body { margin: 0; font-family: system-ui, sans-serif; background:
+linear-gradient(135deg, #0f172a, #1e293b); color: #f1f5f9; display: flex;
+justify-content: center; align-items: center; min-height: 100vh; }
+
+.app { width: 100%; max-width: 300px; background: #111827; border-radius: 20px;
+padding: 12px; box-shadow: 0 0 10px 5px rgba(91,140,255,0.5); text-align: center; }
+
+h1 { font-size: 1.8rem; margin-bottom: 12px; }
+.title {
+  font-size: clamp(18px, 2.8vw, 28px);
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  display: flex;
+  align-content: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.title .badge {
+  font-size: 12px;
+  background: rgba(91,140,255,0.15);
+  color: #5b8cff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(91,140,255,0.25);
+}
+
+.controls { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
+
+select, button { flex: 1; padding: 10px; border-radius: 12px; border: none; font-weight: 600; background: #1f2937; color: #f9fafb; }
+
+button:hover, select:hover { background: #374151;}
+
+.status { margin: 12px 0; font-size: 1.1rem; font-weight: bold; }
+
+.board { display: grid; grid-template-columns: repeat(3, 92px); gap: 8px; margin-bottom: 8px;}
+
+.cell { aspect-ratio: 1 / 1; border-radius: 12px; font-size: 2.2rem;
+font-weight: bold; background: #1e293b; color: #f8fafc; border: 2px solid #334155; display: flex; justify-content: center; align-items: center;}
+
+.cell.win { background: linear-gradient(180deg, rgba(34,197,94,0.18), transparent), #1e293b; border-color: rgba(34,197,94,0.6); }
+
+
+@media (max-width: 480px) { h1 { font-size: 1.5rem; } .cell { font-size: 1.8rem; } }
+
